@@ -1,0 +1,25 @@
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Virtual environments
+.venv/
+.env/
