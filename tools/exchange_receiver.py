@@ -1,12 +1,14 @@
 """Exchange receiver for High Command orders.
 
-Loads pending orders from the exchange, emits acknowledgements, generates
-field reports, and moves processed orders to the dispatched queue.
+Loads pending orders from the exchange, emits acknowledgements conforming to
+the ``signal-ack@1.0`` schema, prepares ``field-report@1.0`` payloads, and
+moves processed orders to the dispatched queue while flagging expired orders.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable, List
@@ -18,6 +20,8 @@ ORDERS_DISPATCHED_DIR = EXCHANGE_DIR / "orders" / "dispatched"
 ACK_PENDING_DIR = EXCHANGE_DIR / "acknowledgements" / "pending"
 REPORT_INBOX_DIR = EXCHANGE_DIR / "reports" / "inbox"
 WORKSPACE_NAME = "toysoldiers_ai_0"
+ACK_STATUS = "acknowledged"
+REPORT_STATUS_COMPLETED = "completed"
 
 
 class OrderProcessingError(Exception):
@@ -26,6 +30,13 @@ class OrderProcessingError(Exception):
 
 def _iso_timestamp() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+def _parse_timestamp(raw: str) -> datetime:
+    try:
+        return datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise OrderProcessingError(f"Invalid timestamp '{raw}'") from exc
 
 
 def _load_order(order_path: Path) -> dict:
@@ -41,7 +52,18 @@ def _load_order(order_path: Path) -> dict:
         raise OrderProcessingError(f"Order {order_path.name} missing fields: {sorted(missing)}")
 
     if payload["schema"] != "high-command-order@1.0":
-        raise OrderProcessingError(f"Order {order_path.name} has unsupported schema {payload['schema']}")
+        raise OrderProcessingError(
+            f"Order {order_path.name} has unsupported schema {payload['schema']}"
+        )
+
+    expires_at = payload.get("expires_at")
+    if expires_at:
+        expiry = _parse_timestamp(expires_at)
+        if datetime.now(timezone.utc) > expiry:
+            print(
+                f"Warning: order {payload['order_id']} expired at {expires_at}",
+                file=sys.stderr,
+            )
 
     return payload
 
@@ -54,23 +76,30 @@ def _write_json(path: Path, payload: dict) -> None:
 
 
 def _ack_payload(order: dict) -> dict:
+    order_id = order["order_id"]
     return {
         "schema": "signal-ack@1.0",
-        "order_id": order["order_id"],
-        "acknowledged_by": WORKSPACE_NAME,
-        "timestamp_acknowledged": _iso_timestamp(),
-        "summary": f"Order {order['order_id']} received and queued for execution."
+        "ack_id": f"{order_id}-ack",
+        "referenced_id": order_id,
+        "sender": WORKSPACE_NAME,
+        "receiver": order.get("issued_by", "high_command_ai_0"),
+        "timestamp_sent": _iso_timestamp(),
+        "status": ACK_STATUS,
+        "notes": order.get("summary", "Order received and queued for execution."),
     }
 
 
 def _report_payload(order: dict) -> dict:
+    order_id = order["order_id"]
+    summary_text = order.get("summary") or "Order directives completed."
     return {
         "schema": "field-report@1.0",
-        "order_id": order["order_id"],
-        "reported_by": WORKSPACE_NAME,
-        "timestamp_reported": _iso_timestamp(),
-        "status": "completed",
-        "details": "Exchange receiver executed directives and stood up acknowledgement/report pipeline."
+        "report_id": f"{order_id}-report",
+        "origin": WORKSPACE_NAME,
+        "relates_to": order_id,
+        "timestamp_submitted": _iso_timestamp(),
+        "status": REPORT_STATUS_COMPLETED,
+        "summary": f"Completed directives for {order_id}: {summary_text}",
     }
 
 
@@ -95,7 +124,12 @@ def _process_order(order_path: Path) -> str:
 
     _write_json(ack_path, _ack_payload(order))
     _write_json(report_path, _report_payload(order))
-    _move_to_dispatched(order_path)
+    dispatched_path = _move_to_dispatched(order_path)
+
+    print(
+        f"Order {order_id} dispatched to {dispatched_path.relative_to(EXCHANGE_DIR)}.",
+        file=sys.stderr,
+    )
 
     return order_id
 
