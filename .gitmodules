@@ -1,0 +1,3 @@
+[submodule "exchange"]
+	path = exchange
+	url = https://github.com/Contingencyplana/high_command_exchange.git
