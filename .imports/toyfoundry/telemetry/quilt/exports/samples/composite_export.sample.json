@@ -1,0 +1,40 @@
+{
+  "schema": "toyfoundry-composite-telemetry@1.0",
+  "generated_at": "2025-10-15T02:30:00Z",
+  "factory_id": "toyfoundry_ai_0",
+  "batches": [
+    {
+      "batch_id": "A-0001",
+      "ritual": "drill",
+      "units_processed": 12,
+      "status": "success",
+      "duration_ms": 4820
+    },
+    {
+      "batch_id": "A-0002",
+      "ritual": "parade",
+      "units_processed": 10,
+      "status": "success",
+      "duration_ms": 5150
+    },
+    {
+      "batch_id": "A-0003",
+      "ritual": "purge",
+      "units_processed": 2,
+      "status": "success",
+      "duration_ms": 750
+    },
+    {
+      "batch_id": "A-0004",
+      "ritual": "promote",
+      "units_processed": 5,
+      "status": "warning",
+      "duration_ms": 2600
+    }
+  ],
+  "totals": {
+    "rituals_logged": 4,
+    "units_processed": 29,
+    "average_duration_ms": 3330
+  }
+}
