@@ -1,6 +1,6 @@
 # ☀️🌑 daylands_and_nightlands.md — Realm Operations Brief  
 
-*Frontline Handbook — `high_command_ai_0/planning/`*  
+*Division: High Command AI — World Cosmology Doctrine*  
 
 ---
 
