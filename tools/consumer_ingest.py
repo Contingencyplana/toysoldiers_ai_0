@@ -32,7 +32,8 @@ def load_json_records(path: Path) -> list[dict[str, Any]]:
     if isinstance(data, list):
         return data  # type: ignore[return-value]
     if isinstance(data, dict):
-        for key in ("records", "items", "data"):
+        # Accept common top-level keys as record arrays.
+        for key in ("records", "items", "data", "batches"):
             if key in data and isinstance(data[key], list):
                 return data[key]
     raise ValueError("Unsupported JSON structure (expected array of objects)")
@@ -55,14 +56,28 @@ def read_schema_version(md_path: Path) -> str | None:
     if not md_path.exists():
         return None
     text = md_path.read_text(encoding="utf-8", errors="ignore")
-    # Look for a line like: Schema Version: v1.0
+    # Heuristics, in order:
+    # 1) Header line with "— vX.Y" or "- vX.Y"
+    # 2) A line containing "version" with a token like vX.Y
+    # 3) Schema ID line with suffix "@X.Y" → vX.Y
     for line in text.splitlines():
+        # 1) Header em dash form
+        if "— v" in line or "- v" in line:
+            tokens = [t.strip() for t in line.replace("—", "-").split()]
+            for t in tokens:
+                if t.lower().startswith("v") and any(ch.isdigit() for ch in t):
+                    return t
+        # 2) Explicit version word
         if "version" in line.lower():
-            # naive capture of first token like v1.0
             tokens = [t.strip() for t in line.replace(":", " ").split()]
             for t in tokens:
                 if t.lower().startswith("v") and any(ch.isdigit() for ch in t):
                     return t
+        # 3) Schema ID with @
+        if "schema id" in line.lower() and "@" in line:
+            after_at = line.split("@", 1)[1].strip().strip("` ")
+            if after_at:
+                return f"v{after_at}"
     return None
 
 
@@ -147,4 +162,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -7,7 +7,7 @@ local ingestion and validation for order-2025-10-14-011.
 Expected paths (relative to repo root):
 - .imports/toyfoundry/telemetry/quilt/exports/samples/composite_export.sample.json
 - .imports/toyfoundry/telemetry/quilt/exports/samples/composite_export.sample.csv
-- .imports/toyfoundry/telemetry/export_schema.md
+- .imports/toyfoundry/telemetry/quilt/exports/export_schema.md
 
 Optional (if available):
 - .imports/toyfoundry/telemetry/quilt/exports/build_info.json
@@ -20,6 +20,5 @@ After dropping files, run:
 - python -m tools.consumer_ingest \
     --json .imports/toyfoundry/telemetry/quilt/exports/samples/composite_export.sample.json \
     --csv  .imports/toyfoundry/telemetry/quilt/exports/samples/composite_export.sample.csv \
-    --schema .imports/toyfoundry/telemetry/export_schema.md \
+    --schema .imports/toyfoundry/telemetry/quilt/exports/export_schema.md \
     --report exchange/reports/inbox/order-2025-10-14-011-report.json
-
