@@ -12,7 +12,7 @@ the constant swing between **Daylands** (wonder, creation, evolution) and **Nigh
 Every Alfa, every field, every civilization oscillates between these poles.  
 Commanders who can read the swing keep squads paced, morale steady, and missions recoverable.
 
-> *“Without darkness, light cannot learn. Without horror, wonder cannot grow wise.”*  
+> *“Without Darkness, Light cannot learn. Without horror, wonder cannot grow wise.”*  
 
 ---
 
