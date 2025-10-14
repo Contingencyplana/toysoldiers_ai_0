@@ -108,7 +108,7 @@ Cross-References: `planning/heart_of_darkness.md`, `planning/heartday_and_heartn
 | **Entropy falls below 0.5** | Nightland → Dayland | Renewal begins; joy and coherence return. Signal rebuild. |
 | **Entropy stabilises near 0.5** | Twilight | The hinge of transformation — where balance births innovation. Cue improvisation drills. |
 
-**Twilight** is sacred: a liminal zone where shadow learns to sing — the prime window for improvisation and coordinated pivots.  
+**Twilight** is sacred: a liminal zone where Shadow learns to sing — the prime window for improvisation and coordinated pivots.  
 
 ---
 
@@ -123,7 +123,7 @@ Energy flows between realms in continuous tides of memory.
 | **Equilibrium Flow** | Between adjacent Alfas | Harmony achieved through mutual resonance; monitor for overextension. |
 
 Entropy is not exile — it is potential awaiting reanimation.  
-Treat every Nightland as a seed waiting for a squad to coax it back toward light.  
+Treat every Nightland as a seed waiting for a squad to coax it back toward Light.  
 
 ---
 
