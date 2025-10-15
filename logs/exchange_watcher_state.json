@@ -1,18 +1,5 @@
 {
-  "orders_pending": {
-    "order-2025-10-15-018": {
-      "id": "order-2025-10-15-018",
-      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\orders\\pending\\order-2025-10-15-018.json",
-      "summary": "Close-out 014: finalize canary batches, publish artifacts + checksums, and submit completed report.",
-      "timestamp": "2025-10-15T00:20:00Z"
-    },
-    "order-2025-10-15-019": {
-      "id": "order-2025-10-15-019",
-      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\orders\\pending\\order-2025-10-15-019.json",
-      "summary": "Close-out 015: ingest exports, run schema/DQ checks, set acceptance, and submit completed report.",
-      "timestamp": "2025-10-15T00:22:00Z"
-    }
-  },
+  "orders_pending": {},
   "acks_pending": {
     "order-2025-10-14-012": {
       "id": "order-2025-10-14-012",
@@ -25,18 +12,6 @@
       "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-14-013-ack.json",
       "summary": "toysoldiers_ai_0",
       "timestamp": "2025-10-15T00:35:00Z"
-    },
-    "order-2025-10-15-018": {
-      "id": "order-2025-10-15-018",
-      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-018-ack.json",
-      "summary": "toyfoundry_ai_0",
-      "timestamp": "2025-10-15T05:53:31Z"
-    },
-    "order-2025-10-15-019": {
-      "id": "order-2025-10-15-019",
-      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-019-ack.json",
-      "summary": "toysoldiers_ai_0",
-      "timestamp": "2025-10-15T05:54:27Z"
     }
   },
   "reports_inbox": {
@@ -71,16 +46,6 @@
       "id": "order-2025-10-15-017-report",
       "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-017-report.json",
       "summary": "Watcher installation - draft stub."
-    },
-    "order-2025-10-15-018-report": {
-      "id": "order-2025-10-15-018-report",
-      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-018-report.json",
-      "summary": "014 close-out - draft stub."
-    },
-    "order-2025-10-15-019-report": {
-      "id": "order-2025-10-15-019-report",
-      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-019-report.json",
-      "summary": "015 close-out - draft stub."
     }
   }
 }
