@@ -1,0 +1,51 @@
+{
+  "orders_pending": {},
+  "acks_pending": {
+    "order-2025-10-14-012": {
+      "id": "order-2025-10-14-012",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-14-012-ack.json",
+      "summary": "toyfoundry_ai_0",
+      "timestamp": "2025-10-15T00:35:00Z"
+    },
+    "order-2025-10-14-013": {
+      "id": "order-2025-10-14-013",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-14-013-ack.json",
+      "summary": "toysoldiers_ai_0",
+      "timestamp": "2025-10-15T00:35:00Z"
+    }
+  },
+  "reports_inbox": {
+    "order-2025-10-14-012-report": {
+      "id": "order-2025-10-14-012-report",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-14-012-report.json",
+      "summary": "Automation + versioning for telemetry exports; CI + checksums.",
+      "timestamp": "<UTC ISO-8601>"
+    },
+    "order-2025-10-14-013-report": {
+      "id": "order-2025-10-14-013-report",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-14-013-report.json",
+      "summary": "Ingestion + validation + monitoring of Toyfoundry exports.",
+      "timestamp": "<UTC ISO-8601>"
+    },
+    "order-2025-10-15-014-report": {
+      "id": "order-2025-10-15-014-report",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-014-report.json",
+      "summary": "Canary batches produced and exports emitted \u2014 draft stub."
+    },
+    "order-2025-10-15-015-report": {
+      "id": "order-2025-10-15-015-report",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-015-report.json",
+      "summary": "Canary consumer acceptance \u2014 draft stub."
+    },
+    "order-2025-10-15-016-report": {
+      "id": "order-2025-10-15-016-report",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-016-report.json",
+      "summary": "Watcher standardization - draft stub."
+    },
+    "order-2025-10-15-017-report": {
+      "id": "order-2025-10-15-017-report",
+      "path": "C:\\Users\\Admin\\toysoldiers_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-017-report.json",
+      "summary": "Watcher installation - draft stub."
+    }
+  }
+}
