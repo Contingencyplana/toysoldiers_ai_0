@@ -1,0 +1,15 @@
+{
+  "schema": "toyfoundry-composite-telemetry@1.0",
+  "generated_at": "2025-10-15T06:44:33.1456504Z",
+  "commit": "6660c05be67d5ecc377d595fbe8e73c673546d48",
+  "generator": "toyfoundry.quilt.canary@cli",
+  "params": {
+    "batches": [
+      "A-0001",
+      "A-0002",
+      "A-0003",
+      "A-0004"
+    ],
+    "source": "samples"
+  }
+}
