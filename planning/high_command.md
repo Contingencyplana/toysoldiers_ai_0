@@ -74,6 +74,11 @@ Each war-room remains a single `.py` + `.json` pair, ensuring scalability throug
 - Keep `.py` + `.json` paired so automation can deploy or repair instantly.  
 - Remember: battlefields below, war-rooms above, sharing geometry, rhythm, and purpose.
 
+### See Also
+- planning/ai_research_and_development.md
+- planning/ai_labscapes_and_ai_labs.md
+- planning/four_pivotal_fronts/README.md
+
 ---
 
 ## 🛡️ Field Maxim
