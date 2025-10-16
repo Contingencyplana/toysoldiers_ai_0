@@ -1,0 +1,5 @@
+batch_id,ritual,units_processed,status,duration_ms
+A-0001,drill,12,success,4820
+A-0002,parade,10,success,5150
+A-0003,purge,2,success,750
+A-0004,promote,5,warning,2600

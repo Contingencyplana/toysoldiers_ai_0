@@ -1,0 +1,10 @@
+{
+  "recipe": "canary",
+  "timestamp": "2025-10-16T05:39:48Z",
+  "commit": "adccff3",
+  "batches": [
+    "b1",
+    "b2"
+  ],
+  "factory": "toyfoundry_ai_0"
+}
