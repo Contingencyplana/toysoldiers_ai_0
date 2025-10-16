@@ -18,3 +18,8 @@ Quickstart
 - Rollups: `python -m tools.telemetry.quilt_loom`
 - Export: `python -m tools.telemetry.quilt_loom --export`
 - Exports: `.toyfoundry/telemetry/quilt/exports/`
+
+Consumer Responsibilities
+- Validate schema and data quality on imports before acceptance.
+- Confirm pointer links render and remain in sync with High Command.
+- Record acceptance notes in reports (schema/DQ/acceptance status).
