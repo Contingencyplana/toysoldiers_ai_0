@@ -1,0 +1,43 @@
+{
+  "manifest_version": "1.0",
+  "order_id": "order-2025-10-15-020",
+  "generated_at": "2025-10-18T12:45:00Z",
+  "batch_summary": {
+    "alfas_minted": 8,
+    "max_alfa_per_batch": 8,
+    "batch_id": "alfa-1760719553",
+    "template_version": "1.0"
+  },
+  "artifacts": [
+    {
+      "filename": "composite_export.json",
+      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
+      "type": "telemetry_export",
+      "format": "json",
+      "sha256": "89DFAD6059B28113EDB9D26A6457D2C519EE89BA7A204620D155A4DA2F6E1381",
+      "checksum_file": "composite_export.json.sha256",
+      "accessible": true
+    },
+    {
+      "filename": "composite_export.csv",
+      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
+      "type": "telemetry_export",
+      "format": "csv",
+      "sha256": "898B6CB367687EB4CFA3BA9440509295220601B9A5AE5E68B9A258D0735E595C",
+      "checksum_file": "composite_export.csv.sha256",
+      "accessible": true
+    },
+    {
+      "filename": "build_info.json",
+      "path": ".toyfoundry/telemetry/quilt/exports/build_info.json",
+      "type": "build_metadata",
+      "format": "json",
+      "accessible": true
+    }
+  ],
+  "manifest_locations": [
+    ".toyfoundry/telemetry/quilt/exports/",
+    "production/alfa_batches/"
+  ],
+  "consumer_notes": "All artifacts generated from Order 020 standard batch run. Alfas minted with max_alfa_per_batch=8 configuration. Checksums validated. Ready for toysoldier deployment."
+}

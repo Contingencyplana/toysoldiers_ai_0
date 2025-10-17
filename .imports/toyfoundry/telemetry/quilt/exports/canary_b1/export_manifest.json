@@ -1,0 +1,10 @@
+{
+  "files": [
+    "composite_export.csv",
+    "composite_export.json"
+  ],
+  "checksums": {
+    "composite_export.csv": "17d9bd417c342812cbb5331ad412678eb55a4bfcf9f5d14b58d36de99a06bba3",
+    "composite_export.json": "b54113abfbba5265b10b94a1900abb0fd93b7f84070c5e1f8c2e05061781f467"
+  }
+}

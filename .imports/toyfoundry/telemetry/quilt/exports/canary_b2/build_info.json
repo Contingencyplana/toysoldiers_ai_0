@@ -1,0 +1,12 @@
+{
+  "order_id": "order-2025-10-15-030",
+  "batch_name": "canary_b2",
+  "timestamp": "2025-10-17T17:18:34.297376+00:00",
+  "artifacts": {
+    "composite_export.csv": "96443885e58f72899b1d1e515294ef09b1cf57763ebf523ee7345da20b799008",
+    "composite_export.json": "519ac4f5904bcdfad7a7344a7ae1339da7b3bca8d272006ba8ded803e8e8c31a"
+  },
+  "batch_count": 2,
+  "retention_days": 7,
+  "rollback_plan": "Revert to previous export; purge canary Alfas if entropy >0.7"
+}
