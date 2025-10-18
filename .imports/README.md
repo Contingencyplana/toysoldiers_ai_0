@@ -1,8 +1,11 @@
-Toyfoundry import staging
-=========================
+Field Operations Resource Management
+================================
 
-Drop the Toyfoundry telemetry samples and schema here to enable
-local ingestion and validation for order-2025-10-14-011.
+This directory manages field operations resources, including:
+1. AI Labscape integration data
+2. Field intelligence feeds
+3. Tactical resource imports
+4. Operational telemetry
 
 Expected paths (relative to repo root):
 - .imports/toyfoundry/telemetry/quilt/exports/samples/composite_export.sample.json

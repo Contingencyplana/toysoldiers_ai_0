@@ -66,9 +66,9 @@ Eight strategic lineages documented in `planning/big_ideas_families.md` that com
 - Update this scroll and cite `planning/change_log.md` when introducing new acronyms or tools.
 - Mirror changes that affect field execution across Toysoldiers workspaces to preserve alignment.
 
-## Toysoldiers Addenda
+## Field Operations Terminology
 
-Field-specific terminology maintained locally. High Command has been notified of these focused entries for review.
+Core terminology for the Field Operations Front, integrating AI Labscapes and tactical execution.
 
 ### Daylands and Nightlands
 - **Definition:** Dual realms representing low-entropy (Dayland) and high-entropy (Nightland) states of a battlefield or war-room.

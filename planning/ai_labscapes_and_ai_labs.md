@@ -1,15 +1,15 @@
-# 🧪 ai_labscapes_and_ai_labs.md — AI Labscapes & Labs Guide  
-*Frontline Handbook — `high_command_ai_0/planning/`*
+# 🧪 ai_labscapes_and_ai_labs.md — Field Operations AI Integration Guide  
+*Frontline Handbook — `toysoldiers_ai_0/planning/`*
 ---
 ## 🌍 Purpose
-Defines the AI Labscape and its Labs so squads share a clear model of how hypotheses, prototypes, and field drills interlock across the lattice (Alfa → Juliett). Complements battlefield and war‑room guides without duplicating them.
+Defines how the AI Labscapes (ai_labscapes_0 through ai_labscapes_255) power field operations through tactical intelligence, resource optimization, and battlefield coordination. The 256 AI Labscapes form the neural backbone of our field operations, driving tactical decisions and operational excellence.
 ---
-## 📚 Core Definitions
-- AI Lab (Alfa): A 1×1 cell running a concrete hypothesis as a playable micro‑experiment (code + config + telemetry).
-- AI Labscape: A themed collection of Labs arranged on the lattice (e.g., Golf 16×16 = 256; Juliett 64×64 = 4,096).
-- Battlefield (Field Alfa): A Lab oriented to action/emergence under live drills (see `planning/field_workspaces.md`).
-- War‑Room (HQ Alfa): A Lab oriented to deliberation/doctrine drafting (see `planning/high_command.md`).
-- Mind/Dreamscapes: Concept terrains that inspire Lab design (see `planning/mindscapes_and_dreamscapes.md`).
+## 📚 Core Components
+- AI Lab (Alfa): A 1×1 tactical unit providing real-time battlefield intelligence and operational support.
+- AI Labscape: A network of 256 Labs working in concert to power field operations and tactical execution.
+- Battlefield (Field Alfa): The operational theater where AI-powered tactics meet mission objectives.
+- Field Grid: The 16×16 emoji battlegrid interface for tactical command and control.
+- Neural Network: The collective intelligence of all AI Labscapes driving field operations.
 ---
 ## 🧭 Labscape Geometry
 - Alfa: 1×1 — single Lab.
