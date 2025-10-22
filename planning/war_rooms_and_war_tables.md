@@ -171,7 +171,7 @@ Each resolved deliberation increments capacity, producing visual growth instead 
 
 ---
 
-## Scale Key
+## 📐 Scale Key
 
 Scale Key: 1 cell ≈ 1 decision node; 4×4 cells ≈ 1 War-Table; color gradient = entropy index.
 
