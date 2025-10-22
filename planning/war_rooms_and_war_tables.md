@@ -128,6 +128,53 @@ Rotate archetypes through after-action clinics to keep debates sharp and doctrin
 
 ---
 
+## 🧊 8. Quadrants, Pins, and Motion
+
+War-Rooms must read cleanly at a glance. Quadrant grammar keeps cognition visible without drowning operators in micromanagement.
+
+### Quadrant Layout
+
+| Visual | Meaning | Implementation |
+|--------|---------|----------------|
+| Background tint | Health of its War-Table | Map color to consensus or entropy thresholds. |
+| Center pins | Active threads that table commands | Treat each pin as a JSON node with type and state link. |
+| Edge officers | Current wit archetypes on duty | Seat four officers on each side (north, east, south, west). |
+| Floor glyph | Traversable tile | Replace with officer or pin symbol on occupation. |
+
+### Pins as Polymorphic Symbols
+
+| Table | Pin Represents | Sample Payload |
+|--------|----------------|----------------|
+| Intel | Sensor node or scout cluster | `{ "pin_id": "i_07", "reports": 42 }` |
+| Logistics | Convoy or supply line | `{ "pin_id": "l_03", "capacity": 120 }` |
+| Morale | Emotional cluster or story arc | `{ "pin_id": "m_02", "tone": "hopeful" }` |
+| R&D | Experiment or prototype thread | `{ "pin_id": "r_11", "version": "0.3.1" }` |
+
+The icon stays consistent (a pin denotes an active focus) while the payload varies by table.
+
+### Growth Cadence
+
+Start sparse and let rooms earn complexity:
+
+1. **Level 0:** Empty floor grid, no pins or officers.
+2. **Level 1:** Spawn one pin per table once the first report→order loop completes.
+3. **Level 2:** Fill officer seats in cardinal order (north → east → south → west).
+4. **Level 3+:** Evolve pins into sparks, wits, or doctrine glyphs as mission load increases.
+
+Each resolved deliberation increments capacity, producing visual growth instead of manual bookkeeping.
+
+### Movement Rules
+
+- Officers moving between seats swap glyphs with the floor symbol they vacate.
+- Pins migrate through table centers; escalation to another table archives their prior cell.
+- Floor glyphs persist as the default empty state, making occupation changes obvious in the grid.
+
+---
+
+## Scale Key
+
+Scale Key: 1 cell ≈ 1 decision node; 4×4 cells ≈ 1 War-Table; color gradient = entropy index.
+
 ## 🌈 Field Maxim
 
 > Field Maxim: Map the light, discipline the debate, and let every order leave the room sharper than it entered.
