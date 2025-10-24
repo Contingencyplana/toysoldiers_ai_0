@@ -7,12 +7,13 @@ Validates:
 - Field/type/nullability/enum invariants
 - DQ thresholds: non_empty, allowed_rituals/status, units_positive, duration_ms_range
 """
+import argparse
 import json
 import hashlib
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-IMPORTS_DIR = Path(__file__).parents[1] / ".imports" / "toyfoundry" / "telemetry" / "quilt" / "exports"
+DEFAULT_IMPORTS_DIR = Path(__file__).parents[1] / ".imports" / "toyfoundry" / "telemetry" / "quilt" / "exports"
 SCHEMA_VERSION = "v1.0"
 
 ALLOWED_RITUALS = {"forge", "drill", "parade", "purge", "promote"}
@@ -98,14 +99,25 @@ def validate_dq(data: List[Dict]) -> List[str]:
     return errors
 
 
-def main():
+def main(argv: List[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Validate Toyfoundry composite exports for Order 021.")
+    parser.add_argument(
+        "--imports",
+        dest="imports_dir",
+        default=str(DEFAULT_IMPORTS_DIR),
+        help="Directory containing composite_export artifacts (default: consumer imports)",
+    )
+    args = parser.parse_args(argv)
+
+    imports_dir = Path(args.imports_dir)
+
     print("=" * 60)
     print("ORDER 021: Consumer Validation for Standard Run")
     print("=" * 60)
     
     # Step 1: Verify SHA256 checksums
     print("\n[Step 1] Verifying SHA256 checksums...")
-    manifest_path = IMPORTS_DIR / "export_manifest.json"
+    manifest_path = imports_dir / "export_manifest.json"
     
     if not manifest_path.exists():
         print(f"❌ export_manifest.json not found at {manifest_path}")
@@ -115,67 +127,88 @@ def main():
         manifest = json.load(f)
     
     checksum_errors = []
-    for artifact in manifest.get("artifacts", []):
-        file_path = IMPORTS_DIR / artifact["filename"]
-        expected_hash = artifact.get("sha256", "")
-        
-        if not expected_hash:
-            checksum_errors.append(f"No checksum for {artifact['filename']}")
-            continue
-        
-        valid, msg = validate_sha256(file_path, expected_hash)
-        if valid:
-            print(f"  ✓ {artifact['filename']}: {msg}")
-        else:
-            print(f"  ✗ {artifact['filename']}: {msg}")
-            checksum_errors.append(msg)
+
+    artifacts = manifest.get("artifacts", [])
+    if artifacts:
+        for artifact in artifacts:
+            file_path = imports_dir / artifact["filename"]
+            expected_hash = artifact.get("sha256", "")
+
+            if not expected_hash:
+                checksum_errors.append(f"No checksum for {artifact['filename']}")
+                continue
+
+            valid, msg = validate_sha256(file_path, expected_hash)
+            if valid:
+                print(f"  ✓ {artifact['filename']}: {msg}")
+            else:
+                print(f"  ✗ {artifact['filename']}: {msg}")
+                checksum_errors.append(msg)
+    else:
+        checksums = manifest.get("checksums", {})
+        for filename, expected_hash in checksums.items():
+            file_path = imports_dir / filename
+            valid, msg = validate_sha256(file_path, expected_hash)
+            if valid:
+                print(f"  ✓ {filename}: {msg}")
+            else:
+                print(f"  ✗ {filename}: {msg}")
+                checksum_errors.append(msg)
     
     # Step 2: Validate schema v1.0
     print(f"\n[Step 2] Validating schema {SCHEMA_VERSION}...")
-    composite_json = IMPORTS_DIR / "composite_export.json"
+    composite_json = imports_dir / "composite_export.json"
     
     if not composite_json.exists():
-        print(f"❌ composite_export.json not found")
+        print("❌ composite_export.json not found")
         return 1
-    
+
     with open(composite_json) as f:
-        data = json.load(f)
-    
+        payload = json.load(f)
+
+    if isinstance(payload, list):
+        data = payload
+    elif isinstance(payload, dict) and isinstance(payload.get("batches"), list):
+        data = payload["batches"]
+    else:
+        print("❌ composite_export.json has unsupported structure (expected list or object with 'batches')")
+        return 1
+
     schema_errors = validate_schema(data)
     if schema_errors:
-        print(f"  ✗ Schema validation failed:")
+        print("  ✗ Schema validation failed:")
         for err in schema_errors[:10]:  # Show first 10
             print(f"    - {err}")
         if len(schema_errors) > 10:
             print(f"    ... and {len(schema_errors) - 10} more errors")
     else:
         print(f"  ✓ Schema validation passed ({len(data)} records)")
-    
+
     # Step 3: Validate DQ thresholds
     print("\n[Step 3] Validating data quality thresholds...")
     dq_errors = validate_dq(data)
     if dq_errors:
-        print(f"  ✗ DQ validation failed:")
+        print("  ✗ DQ validation failed:")
         for err in dq_errors[:10]:
             print(f"    - {err}")
         if len(dq_errors) > 10:
             print(f"    ... and {len(dq_errors) - 10} more errors")
     else:
-        print(f"  ✓ DQ validation passed")
-    
+        print("  ✓ DQ validation passed")
+
     # Step 4: Summary
     print("\n" + "=" * 60)
     print("VALIDATION SUMMARY")
     print("=" * 60)
-    
+
     total_errors = len(checksum_errors) + len(schema_errors) + len(dq_errors)
-    
+
     if total_errors == 0:
         print("✅ ACCEPT: All validations passed")
         print(f"   - Records validated: {len(data)}")
-        print(f"   - SHA256 checks: PASS")
-        print(f"   - Schema v1.0: PASS")
-        print(f"   - DQ thresholds: PASS")
+        print("   - SHA256 checks: PASS")
+        print("   - Schema v1.0: PASS")
+        print("   - DQ thresholds: PASS")
         return 0
     else:
         print("❌ REJECT: Validation failures detected")

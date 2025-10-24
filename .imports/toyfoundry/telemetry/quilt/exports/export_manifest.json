@@ -14,7 +14,7 @@
       "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
       "type": "telemetry_export",
       "format": "json",
-      "sha256": "89DFAD6059B28113EDB9D26A6457D2C519EE89BA7A204620D155A4DA2F6E1381",
+      "sha256": "1dcfe5a8362f620a9e0512b6155e6eec421e4d9d189d1e2a190f6da485041757",
       "checksum_file": "composite_export.json.sha256",
       "accessible": true
     },
@@ -23,7 +23,7 @@
       "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
       "type": "telemetry_export",
       "format": "csv",
-      "sha256": "898B6CB367687EB4CFA3BA9440509295220601B9A5AE5E68B9A258D0735E595C",
+      "sha256": "1c4497c33c5d04f29581cc4caada8edff6c54ff850d6040048083995e2befb94",
       "checksum_file": "composite_export.csv.sha256",
       "accessible": true
     },
@@ -32,7 +32,8 @@
       "path": ".toyfoundry/telemetry/quilt/exports/build_info.json",
       "type": "build_metadata",
       "format": "json",
-      "accessible": true
+      "accessible": true,
+      "sha256": "231b612addfd96c41d5a0677d3232c6103e6b256cd0491f370704cb4afb73da5"
     }
   ],
   "manifest_locations": [

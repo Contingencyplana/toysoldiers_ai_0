@@ -1,38 +1,15 @@
 {
-  "build_id": "order-020-standard-batch",
-  "timestamp": "2025-10-18T12:45:00Z",
-  "issuer": "toyfoundry_ai_0",
-  "order_id": "order-2025-10-15-020",
-  "source": "standard_batch",
-  "recipe": "quilt_exports@1.0",
-  "batch_config": {
-    "max_alfa_per_batch": 8,
-    "template_version": "1.0",
-    "forge_version": "forge_mint_alfa.py v1.0"
-  },
-  "artifacts": [
-    {
-      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
-      "sha256": "89DFAD6059B28113EDB9D26A6457D2C519EE89BA7A204620D155A4DA2F6E1381"
-    },
-    {
-      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
-      "sha256": "898B6CB367687EB4CFA3BA9440509295220601B9A5AE5E68B9A258D0735E595C"
-    }
-  ],
-  "alfas_minted": [
-    "alfa-1760719553-00000001",
-    "alfa-1760719553-00000002",
-    "alfa-1760719553-00000003",
-    "alfa-1760719553-00000004",
-    "alfa-1760719553-00000005",
-    "alfa-1760719553-00000006",
-    "alfa-1760719553-00000007",
-    "alfa-1760719553-00000008"
-  ],
-  "telemetry_summary": {
-    "total_mint_events": 9,
-    "successful_mints": 8,
-    "ritual_events": 4
+  "schema": "toyfoundry-composite-telemetry@1.0",
+  "generated_at": "2025-10-15T06:44:33.1456504Z",
+  "commit": "6660c05be67d5ecc377d595fbe8e73c673546d48",
+  "generator": "toyfoundry.quilt.canary@cli",
+  "params": {
+    "batches": [
+      "A-0001",
+      "A-0002",
+      "A-0003",
+      "A-0004"
+    ],
+    "source": "samples"
   }
 }
