@@ -14,7 +14,19 @@ Each operation, mission, and deployment here exists to **validate and perfect fi
 
 ---
 
-## 🧭 Mission Statement
+## � Pivot Five Activation — Emoji-First Commands
+
+High Command has activated **Major Pivot Five: Emoji-First Computing Language**. Toysoldiers must now ensure every field workflow supports the shared glyph lexicon, narration layer, and emoji ↔ JSON ↔ emoji round-trip. The Field Operations Front owns the tactical rollout:
+
+- 🧱 **Translator Bridge:** Wire emoji chains into exchange orders and Toyfoundry rituals with zero text required.
+- 🎙️ **Narration:** Provide audible, lore-aligned playback for toddler co-play and accessibility compliance.
+- 🤖 **Dual-Use Grammar:** Maintain parity between human experience and SHAGI agent training tokens.
+
+All mission briefs, reports, and validation scripts should reference the emoji-first surface so pre-literate allies can participate alongside AI battalions.
+
+---
+
+## �🧭 Mission Statement
 
 To transform strategic directives into **precise field operations**.  
 To power tactical execution through AI Labscapes integration.  
@@ -81,10 +93,10 @@ it ensures maximum field effectiveness through AI-powered tactical execution.
 ## 🕊️ Field Operations Maxim
 
 > **"Execute with precision, powered by intelligence."**  
->  
+> 
 > For action without AI guidance falters,  
 > and operations without tactical mastery lead nowhere.  
->  
+> 
 > The Field Operations Front stands ready —  
 > powered by 256 AI Labscapes,  
 > executing through the perfect geometry of the 16×16.  

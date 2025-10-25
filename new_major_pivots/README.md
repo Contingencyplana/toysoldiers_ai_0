@@ -8,13 +8,13 @@
 
 ## Overview
 
-The **Four Major Pivots** represent a fundamental shift in how we build **Nightlands Multiplayer Game** and pursue the **SHAGI (Supersafe Hyperadvanced Artificial General Intelligence)** vision.
+The **Five Major Pivots** represent a fundamental shift in how we build **Nightlands Multiplayer Game** and pursue the **SHAGI (Supersafe Hyperadvanced Artificial General Intelligence)** vision.
 
 **Core insight:** The existing workflow (VSCode, PowerShell, GitHub, Azure) is soul-destroyingly boring for the human operator. To sustain this project long-term, we must transform development into gameplay—where tactical decisions on emoji battlegrids drive automation behind the scenes.
 
 ---
 
-## The Four Major Pivots
+## The Five Major Pivots
 
 | Pivot | Summary | Impact |
 |-------|---------|--------|
@@ -22,6 +22,7 @@ The **Four Major Pivots** represent a fundamental shift in how we build **Nightl
 | **[Two](new_major_pivot_2.md)** | **Playable Workflow Overlay** | 16×16 emoji battlegrids (Alfas) replace VSCode/PowerShell/GitHub/Azure interfaces |
 | **[Three](new_major_pivot_3.md)** | **Maintain Big Ideas & SHAGI Vision** | Methodology change, not vision abandonment—playable workflows are SHAGI training ground |
 | **[Four](new_major_pivot_4.md)** | **Fractal Folder Structure** | Golf_00 through Golf_15 organize 4,096 Alfas (workflow nodes) via base-16 hierarchy |
+| **[Five](new_major_pivot_5.md)** | **Emoji-First Computing Language** | Emoji glyph chains become universal commands for toddlers, allies, and SHAGI agents |
 
 ---
 
@@ -46,14 +47,20 @@ The **Four Major Pivots** represent a fundamental shift in how we build **Nightl
 ┌────────────────▼────────────────────────────────┐
 │  PIVOT FOUR: Fractal Folder Structure           │  ← Organizational foundation
 │  (Golf_00–15 hold 4,096 Alfas = scalability)    │
+└────────────────┬────────────────────────────────┘
+                 │
+┌────────────────▼────────────────────────────────┐
+│  PIVOT FIVE: Emoji-First Computing Language     │  ← Universal interface
+│  (Glyph lexicon + narration = inclusive control)│
 └─────────────────────────────────────────────────┘
 ```
 
 **Read bottom-to-top for implementation order:**
 1. Establish fractal structure (golf folders) ✅ **Done**
 2. Build playable overlay (Alfa Zero prototype) ← **Next**
-3. Achieve 70/30 ratio (measure time in game vs. VSCode)
-4. Scale to multiverse (SHAGI training data from 4,096 Alfas)
+3. Activate emoji-first command set across all workflows ← **Now tracking**
+4. Achieve 70/30 ratio (measure time in game vs. VSCode)
+5. Scale to multiverse (SHAGI training data from 4,096 Alfas)
 
 ---
 
@@ -61,17 +68,19 @@ The **Four Major Pivots** represent a fundamental shift in how we build **Nightl
 
 ### Completed
 - ✅ **Pivot Four** — Fractal folder structure created (`golf_00` through `golf_15`)
-- ✅ **Pivot documentation** — All four pivots formally specified
+- ✅ **Pivot Five** — Emoji-first computing language charter published (glyph lexicon + runtime bridge)
+- ✅ **Pivot documentation** — Five pivots formally specified
 - ✅ **Exchange protocol operational** — High Command ↔ Toyfoundry ↔ Toysoldiers coordination proven
 - ✅ **Telemetry quilt functional** — Aggregates factory-reports into composite rollups
 
 ### In Progress
 - 🔄 **Alfa Zero prototype** — Spec drafted (`docs/alfa_zero_spec.md`), implementation pending
+- 🔄 **Emoji compiler tooling** — Translator + narration bridge wiring into Toyfoundry/Toysoldiers workflows
 - 🔄 **Pre-pivot orders cleanup** — Order-031 awaiting Toysoldiers report
 
-### Upcoming
 - 📋 **Alfa Zero Phase 1** — Build static 16×16 grid renderer
 - 📋 **Alfa Zero Phase 2** — Wire grid to exchange protocol (clicks → orders → telemetry → grid updates)
+- 📋 **Emoji runtime validation** — Extend `tools/validate_order_021.py` scaffolding to lint glyph payloads
 - 📋 **Golf_00 population** — Create first 256 Alfas (validate fractal architecture)
 
 ---
@@ -137,24 +146,31 @@ The **Four Major Pivots** represent a fundamental shift in how we build **Nightl
 - All 4,096 Alfas addressable via golf_XX/delta_YY/alfa_ZZ
 - Telemetry aggregation scales to 4,096 concurrent Alfas
 
+**Pivot Five:**
+- Tier-0 emoji command set (≤4 glyphs) drives real orders
+- Emoji ↔ JSON ↔ emoji round-trips validated through automated tests
+- Narration pipeline provides audible feedback for every compiled glyph chain
+
 ---
 
 ## Next Actions
 
 ### Immediate (This Week)
 1. **Build Alfa Zero Phase 1** — Static 16×16 grid renderer (terminal-based) in `golf_00/delta_00/alfa_00/`
-2. **Close Order-031** — Archive after Toysoldiers report (pre-pivot cleanup)
-3. **Update documentation** — Cascade pivots into README.md, war_office.md ✅ **Done**
+2. **Stand up glyph translator spike** — Prototype emoji → JSON compiler in Toyfoundry runtime
+3. **Update documentation** — Cascade pivots into README.md, war_office.md, and battlefield briefs ✅ **Ongoing**
 
 ### Short-Term (Next 2-4 Weeks)
 1. **Alfa Zero Phase 2** — Wire grid to exchange protocol
 2. **Alfa Zero Phase 3** — Implement telemetry → grid updates + victory conditions
-3. **Populate Golf_00/Delta_00** — Create first 16 Alfas (validate templates)
+3. **Emoji runtime adapter** — Harden narration + validator services for shared toddler/AI play
+4. **Populate Golf_00/Delta_00** — Create first 16 Alfas (validate templates)
 
 ### Medium-Term (Next 2-3 Months)
 1. **Scale to Golf_00 complete** — 256 Alfas (16 delta sectors)
-2. **Expand to Golf_00-03** — 1,024 Alfas (4 golf theaters, early campaign)
-3. **Multiplayer prototype** — Multiple operators in different theaters/sectors
+2. **Deploy emoji-first Alfa** — First toddler/AI co-play mission logged with narration + telemetry capture
+3. **Expand to Golf_00-03** — 1,024 Alfas (4 golf theaters, early campaign)
+4. **Multiplayer prototype** — Multiple operators in different theaters/sectors
 
 ---
 
@@ -186,6 +202,7 @@ The **Four Major Pivots** represent a fundamental shift in how we build **Nightl
 | `new_major_pivot_2.md` | Playable Workflow Overlay architecture |
 | `new_major_pivot_3.md` | Big Ideas & SHAGI Vision alignment |
 | `new_major_pivot_4.md` | Fractal Folder Structure (golf_00-15) design |
+| `new_major_pivot_5.md` | Emoji-First Computing Language charter |
 | `README.md` | This document (overview & integration) |
 
 **Related documents:**
