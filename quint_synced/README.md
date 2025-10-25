@@ -15,6 +15,7 @@ Update the files here first, then immediately propagate the exact same change to
 | Version | Date | Notes | Workspaces Updated |
 | --- | --- | --- | --- |
 | v1.0 | 2025-10-26 | Initial payload & narration alignment drop | HC · TF · TS · VC · RD |
+| v1.1 | 2025-10-26 | Added action orders requesting ACK/TODO from each workspace | Pending front acknowledgements |
 
 **Process reminder:**
 

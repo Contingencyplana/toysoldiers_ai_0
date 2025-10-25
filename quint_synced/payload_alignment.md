@@ -1,5 +1,13 @@
 # Payload Alignment: `factory-order@1.0`
 
+## Action Required — 2025-10-26
+
+- Review this payload brief together with `quint_synced/narration_alignment.md` in your workspace.
+- Confirm the `factory-order@1.0` schema behaves in your local runtime; note any integration gaps immediately.
+- Keep `quint_synced/` copies identical across all five workspaces—propagate any edits back to High Command and the remaining fronts as soon as they land.
+- Reply with a quick ACK (or an annotated TODO) so the sync log can capture your status.
+- Maintain lore alignment: the payload `summary` line must stay in lockstep with the narration guidance; flag War Office if you need extra VO, localization, or schema support.
+
 ## Reference Artifacts
 
 - `C:\Users\Admin\toysoldiers_ai_0\samples\emoji_commands\level0_sample.json`

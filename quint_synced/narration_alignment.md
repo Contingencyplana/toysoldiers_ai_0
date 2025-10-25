@@ -1,5 +1,12 @@
 # Narration Alignment Brief
 
+## Action Required — 2025-10-26
+
+- Review this narration brief alongside `quint_synced/payload_alignment.md` and verify the current VO guidance fits your runtime.
+- Confirm the payload `summary` line and narrated delivery stay lore-aligned; raise War Office support requests for VO, localization, or schema tweaks.
+- Keep `quint_synced/` files synchronized across all five repositories; mirror any revisions back to High Command and peers immediately.
+- Respond with an ACK or TODO so the alignment rollup can be recorded in the shared README sync log.
+
 ## Reference Line
 
 - Stub captured from spike: `"Forge crafts the Ally → Victory"`
