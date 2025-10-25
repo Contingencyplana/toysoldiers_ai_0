@@ -1,0 +1,42 @@
+{
+  "nouns": [
+    {"id": "forge", "emoji": "\uD83D\uDEE0\uFE0F", "label": "Forge", "description": "Factory core responsible for crafting outputs."},
+    {"id": "field", "emoji": "\uD83C\uDF3E", "label": "Field", "description": "Open terrain for harvesting and deployment."},
+    {"id": "dream", "emoji": "\uD83C\uDF0C", "label": "Dream", "description": "Mythic vision layer guiding strategy."},
+    {"id": "river", "emoji": "\uD83C\uDF0A", "label": "River", "description": "Fluid logistics channel."},
+    {"id": "wall", "emoji": "\uD83E\uDDF1", "label": "Wall", "description": "Defensive infrastructure."},
+    {"id": "ember", "emoji": "\uD83D\uDD25", "label": "Ember", "description": "Stored energy awaiting ignition."},
+    {"id": "seed", "emoji": "\uD83C\uDF31", "label": "Seed", "description": "Growth catalyst for future capacity."},
+    {"id": "ally", "emoji": "\uD83E\uDD16", "label": "Ally", "description": "Trusted autonomous partner."}
+  ],
+  "verbs": [
+    {"id": "craft", "emoji": "\u2692\uFE0F", "label": "Craft", "ritual": "forge"},
+    {"id": "launch", "emoji": "\uD83D\uDE80", "label": "Launch", "ritual": "launch"},
+    {"id": "grow", "emoji": "\uD83C\uDF3F", "label": "Grow", "ritual": "cultivate"},
+    {"id": "shield", "emoji": "\uD83D\uDEE1\uFE0F", "label": "Shield", "ritual": "fortify"},
+    {"id": "weave", "emoji": "\uD83E\uDDF6", "label": "Weave", "ritual": "integrate"},
+    {"id": "loop", "emoji": "\uD83D\uDD01", "label": "Loop", "ritual": "iterate"},
+    {"id": "deliver", "emoji": "\uD83D\uDCE6", "label": "Deliver", "ritual": "deploy"},
+    {"id": "transmute", "emoji": "\uD83E\uDDEA", "label": "Transmute", "ritual": "transform"}
+  ],
+  "qualifiers": [
+    {"id": "tempo", "emoji": "\u23F1\uFE0F", "label": "Tempo", "effect": "accelerate"},
+    {"id": "idea", "emoji": "\uD83D\uDCA1", "label": "Idea", "effect": "innovate"},
+    {"id": "signal", "emoji": "\uD83D\uDEF0", "label": "Signal", "effect": "broadcast"},
+    {"id": "north", "emoji": "\uD83D\uDDFA\uFE0F", "label": "North", "effect": "navigate"},
+    {"id": "inspect", "emoji": "\uD83D\uDD0D", "label": "Inspect", "effect": "audit"},
+    {"id": "cloud", "emoji": "\u2601\uFE0F", "label": "Cloud", "effect": "virtualize"},
+    {"id": "safe", "emoji": "\uD83D\uDD12", "label": "Safe", "effect": "lock"},
+    {"id": "target", "emoji": "\uD83C\uDFAF", "label": "Target", "effect": "focus"}
+  ],
+  "outcomes": [
+    {"id": "victory", "emoji": "\u2705", "label": "Victory", "status": "success"},
+    {"id": "risk", "emoji": "\u26A0\uFE0F", "label": "Risk", "status": "warning"},
+    {"id": "sleep", "emoji": "\uD83D\uDCA4", "label": "Sleep", "status": "paused"},
+    {"id": "rise", "emoji": "\uD83D\uDCC8", "label": "Rise", "status": "escalate"},
+    {"id": "chaos", "emoji": "\uD83C\uDF00", "label": "Chaos", "status": "unstable"},
+    {"id": "blessing", "emoji": "\uD83C\uDF08", "label": "Blessing", "status": "boost"},
+    {"id": "pause", "emoji": "\uD83E\uDD76", "label": "Pause", "status": "hold"},
+    {"id": "repeat", "emoji": "\uD83D\uDD01", "label": "Repeat", "status": "loop"}
+  ]
+}
