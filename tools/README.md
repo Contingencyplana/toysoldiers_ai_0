@@ -7,8 +7,10 @@ This directory contains tools for managing field operations, AI Labscape integra
 ## Operational Tools
 
 ### Current Tools
+
 - `consumer_ingest.{ps1,py}`: Field resource ingestion
 - `consumer_validate.py`: Field validation protocols
+- `emoji_translator.py`: Production emoji glyph translator emitting factory-order@1.0 payloads
 - `exchange_receiver.py`: Command reception
 - `exchange_watcher.py`: Field communications monitor
 - `schema_validator.py`: Protocol validation
@@ -17,6 +19,7 @@ This directory contains tools for managing field operations, AI Labscape integra
 - `validate_order_021.py`: Order validation
 
 ### Planned Field Operations Tools
+
 1. **AI Labscape Integration**
    - `labscape_connector.py`: AI Labscape integration
    - `field_intelligence.py`: Real-time intelligence processing
@@ -35,23 +38,27 @@ This directory contains tools for managing field operations, AI Labscape integra
 ## Integration Points
 
 ### AI Labscape Integration
+
 - Connect to ai_labscapes_0 through ai_labscapes_255
 - Process real-time tactical intelligence
 - Optimize resource deployment
 
 ### Emoji Battlegrid Interface
+
 - Manage 16×16 operational grids
 - Process tactical commands
 - Visualize field operations
 
 ### Field Intelligence
+
 - Collect and analyze field data
 - Share intelligence across theaters
 - Generate tactical reports
 
 ## Usage
 
-### Current Tools
+### Usage — Current Tools
+
 ```powershell
 # Validate field resources
 ./validate_exports.ps1
@@ -60,7 +67,8 @@ This directory contains tools for managing field operations, AI Labscape integra
 python -m tools.consumer_validate --report <report.json>
 ```
 
-### Planned Tools
+### Usage — Planned Tools
+
 ```powershell
 # Connect to AI Labscapes
 python -m tools.labscape_connector --theater golf_00

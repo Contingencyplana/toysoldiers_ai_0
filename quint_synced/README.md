@@ -16,6 +16,7 @@ Update the files here first, then immediately propagate the exact same change to
 | --- | --- | --- | --- |
 | v1.0 | 2025-10-26 | Initial payload & narration alignment drop | HC · TF · TS · VC · RD |
 | v1.1 | 2025-10-26 | Added action orders requesting ACK/TODO from each workspace | Pending front acknowledgements |
+| v1.2 | 2025-10-26 | Toysoldiers production translator go-live; schema ACK recorded | TS (pending mirror to peers) |
 | v1.2 | 2025-10-26 | Pivot Five emoji-first alignment updates staged here | VC (source) · Pending HC · TF · TS · RD |
 | v1.3 | 2025-10-26 | RD review + adoption of Pivot Five alignment set; ready to propagate outward | RD · Pending HC · TF · TS |
 
