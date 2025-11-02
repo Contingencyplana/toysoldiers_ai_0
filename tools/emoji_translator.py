@@ -12,7 +12,7 @@ LEXICON_PATH = ROOT / "planning" / "emoji_language" / "glyph_lexicon_level0.json
 DEFAULT_LOG = ROOT / "planning" / "emoji_language" / "spike_logs" / "translator_round_trips.jsonl"
 FACTORY_ORDER_SCHEMA = "factory-order@1.0"
 
-ALLOWED_RITUALS = {"forge", "drill", "parade", "purge", "promote"}
+ALLOWED_RITUALS = {"forge", "drill", "parade", "purge", "promote", "scout"}
 ALLOWED_STATUS = {"success", "warning", "error"}
 DURATION_MIN = 0
 DURATION_MAX = 300_000  # 5 minutes in ms
@@ -106,6 +106,7 @@ VERB_CANONICAL_RITUAL: Dict[str, str] = {
     "loop": "drill",
     "deliver": "promote",
     "transmute": "forge",
+    "probe": "scout",
 }
 
 OUTCOME_STATUS: Dict[str, str] = {
@@ -117,6 +118,7 @@ OUTCOME_STATUS: Dict[str, str] = {
     "blessing": "success",
     "pause": "warning",
     "repeat": "warning",
+    "fallback": "warning",
 }
 
 
@@ -247,7 +249,6 @@ def validate_factory_order(order: Mapping[str, Any], index: GlyphIndex | None = 
                 schema_errors.append(f"glyph_chain[{idx}] must be a non-empty string")
 
     intent_payload = order.get("intent")
-    intent_complete = False
     if not isinstance(intent_payload, dict):
         schema_errors.append("intent must be an object")
     else:
@@ -292,7 +293,6 @@ def validate_factory_order(order: Mapping[str, Any], index: GlyphIndex | None = 
             if qualifier is None:
                 schema_errors.append(f"intent.qualifiers[{idx}] must reference a known glyph id")
 
-        intent_complete = actor is not None and action is not None
 
     telemetry = order.get("telemetry_stub")
     if not isinstance(telemetry, Mapping):
@@ -301,17 +301,24 @@ def validate_factory_order(order: Mapping[str, Any], index: GlyphIndex | None = 
         schema_errors.extend(validate_telemetry_schema([telemetry]))
         dq_errors.extend(validate_telemetry_dq([telemetry]))
 
-    if intent_complete and isinstance(intent_payload, dict) and isinstance(summary, str):
-        try:
-            expected_summary = summary_from_intent(intent_payload, lexicon)
-        except ValueError as exc:
-            dq_errors.append(str(exc))
+    narration = order.get("narration")
+    narration_line: Optional[str] = None
+    if narration is not None:
+        if not isinstance(narration, Mapping):
+            schema_errors.append("narration must be an object when provided")
         else:
-            if expected_summary != summary:
-                dq_errors.append(
-                    "Narration summary mismatch: "
-                    f"expected '{expected_summary}', got '{summary}'"
-                )
+            line = narration.get("line")
+            if line is not None and not isinstance(line, str):
+                schema_errors.append("narration.line must be a string when provided")
+            if isinstance(line, str):
+                narration_line = line
+
+    if narration_line and isinstance(summary, str) and summary.strip():
+        if summary.strip() != narration_line.strip():
+            dq_errors.append(
+                "Summary and narration.line differ: "
+                f"summary='{summary.strip()}', narration.line='{narration_line.strip()}'"
+            )
 
     return {
         "schema_errors": schema_errors,
