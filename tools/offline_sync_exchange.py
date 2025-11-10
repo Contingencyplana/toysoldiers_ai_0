@@ -3,7 +3,15 @@
 
 import os
 import shutil
+import sys
 from pathlib import Path
+
+# Configure stdout to avoid Windows console encoding issues
+try:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 
 # Shared hub path
 EXCHANGE = Path(os.getenv("SHAGI_EXCHANGE_PATH", "C:/Users/Admin/high_command_exchange"))
@@ -45,7 +53,7 @@ def sync_local(workspace_root: str):
         else:
             print(f"[OK] Synced {files_copied} {name} file(s) to {dst}")
 
-    print("✅ Local exchange sync complete.")
+    print("[OK] Local exchange sync complete.")
 
 
 if __name__ == "__main__":

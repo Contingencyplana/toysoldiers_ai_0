@@ -126,18 +126,25 @@ def update_ledger(repo_root: Path) -> int:
                 entry["order_path"] = rel
                 changed += 1
 
-    # Recompute statuses
+    # Recompute statuses with location-aware rules
     for oid, entry in list(ledger.orders.items()):
-        order_path = entry.get("order_path")
-        ack_path = entry.get("ack_path")
-        report_path = entry.get("report_path")
+        order_path = entry.get("order_path") or ""
+        ack_path = entry.get("ack_path") or ""
+        report_path = entry.get("report_path") or ""
+
+        def _is_closed() -> bool:
+            return (
+                (order_path.startswith("orders/completed/") or order_path.startswith("orders/dispatched/"))
+                and ack_path.startswith("acknowledgements/logged/")
+                and report_path.startswith("reports/archived/")
+            )
 
         new_status = entry.get("status")
-        if order_path and ack_path and report_path:
+        if _is_closed():
             new_status = "closed"
         elif report_path:
             new_status = "received"
-        elif ack_path:
+        elif ack_path.startswith("acknowledgements/logged/"):
             new_status = "acknowledged"
         if new_status != entry.get("status"):
             entry["status"] = new_status

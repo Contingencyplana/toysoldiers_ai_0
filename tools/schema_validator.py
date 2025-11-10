@@ -9,6 +9,7 @@ from typing import Iterable
 
 SCHEMA_SIGNAL_ACK = "signal-ack@1.0"
 SCHEMA_FIELD_REPORT = "field-report@1.0"
+SCHEMA_FACTORY_REPORT = "factory-report@1.0"
 
 
 class ValidationError(Exception):
@@ -62,6 +63,20 @@ def _validate_field_report(payload: dict) -> None:
     _validate_timestamp(payload["timestamp_submitted"], "timestamp_submitted")
 
 
+def _validate_factory_report(payload: dict) -> None:
+    required = {
+        "report_id",
+        "order_id",
+        "reported_by",
+        "receiver",
+        "timestamp_reported",
+        "status",
+        "summary",
+    }
+    _require_keys(payload, required)
+    _validate_timestamp(payload["timestamp_reported"], "timestamp_reported")
+
+
 def _validate_payload(payload: dict) -> None:
     schema = payload.get("schema")
     if not schema:
@@ -73,6 +88,10 @@ def _validate_payload(payload: dict) -> None:
 
     if schema == SCHEMA_FIELD_REPORT:
         _validate_field_report(payload)
+        return
+
+    if schema == SCHEMA_FACTORY_REPORT:
+        _validate_factory_report(payload)
         return
 
     raise ValidationError(f"Unsupported schema '{schema}'")
