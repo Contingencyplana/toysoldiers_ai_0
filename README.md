@@ -104,3 +104,6 @@ it ensures maximum field effectiveness through AI-powered tactical execution.
 ---
 
 **End of Scroll — `toysoldiers_ai_0/README.md`**
+## Python commands
+- Readiness: `python -m tools.ops_readiness`
+- Exchange (validate + sync): `python tools/exchange_all.py`
