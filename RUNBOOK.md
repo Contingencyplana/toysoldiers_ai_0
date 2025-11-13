@@ -45,9 +45,9 @@ Escalation ladder: Primary -> Secondary -> Duty Officer -> Toyfoundry Flight (on
    - **Stagger rituals** if capacity is fixed; inject a 90-second offset for theta, then back off delta in 30-second increments until spikes normalize.
 3. Document the chosen mitigation in the ops scratchpad, then update this runbook checklist before leaving the meeting.
 4. Verification checklist:
-   - [ ] Queue change merged/configured in infrastructure repo.
-   - [ ] Ritual owners sign off in `#shagi-field-ops`.
-   - [ ] Fresh delta/theta frontline feedback captured (see below) with cooldown complaints cleared.
+   - [x] Queue change merged/configured in infrastructure repo (parallel lanes deployed 2025-11-13T16:10Z).
+   - [x] Ritual owners sign off in `#shagi-field-ops`.
+   - [x] Fresh delta/theta frontline feedback captured (see `frontline_feedback_20251113T171402Z_genesis-delta.json` and `frontline_feedback_20251113T171415Z_genesis-theta.json`).
 
 ### Zeta night-drill music patch
 - Source material: `exchange/reports/inbox/frontline_feedback_20251111T072102Z_genesis-zeta.json`.
