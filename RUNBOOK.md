@@ -35,6 +35,31 @@ Escalation ladder: Primary -> Secondary -> Duty Officer -> Toyfoundry Flight (on
 4. **Go/No-Go (T-0)**
    - Announce status in `#shagi-field-ops` with the readiness timestamp and `git rev-parse HEAD` hash.
 
+## Mitigation Playbooks
+### Dual-layer cooldown blitz
+- Source material: `exchange/reports/inbox/frontline_feedback_20251111T065332Z_genesis-delta.json` and `exchange/reports/inbox/frontline_feedback_20251111T072050Z_genesis-theta.json`.
+- Assemble attendees: genesis-delta ops lead, genesis-theta ops lead, ritual queue owners, and the Toysoldiers duty officer.
+1. Plot cooldown spikes by 15-minute windows using telemetry from the above reports plus live queue metrics.
+2. Decide on mitigation:
+   - **Parallelize rituals** if CPU/memory headroom exists; split the queue into paired lanes.
+   - **Stagger rituals** if capacity is fixed; inject a 90-second offset for theta, then back off delta in 30-second increments until spikes normalize.
+3. Document the chosen mitigation in the ops scratchpad, then update this runbook checklist before leaving the meeting.
+4. Verification checklist:
+   - [ ] Queue change merged/configured in infrastructure repo.
+   - [ ] Ritual owners sign off in `#shagi-field-ops`.
+   - [ ] Fresh delta/theta frontline feedback captured (see below) with cooldown complaints cleared.
+
+### Zeta night-drill music patch
+- Source material: `exchange/reports/inbox/frontline_feedback_20251111T072102Z_genesis-zeta.json`.
+1. Pair the music lead (op-music-09) with the genesis-zeta operator during the next night drill rehearsal.
+2. Capture exact clash cases by exporting the ritual timing stems and the night-drill preset mix.
+3. Choose the fix:
+   - Retune the preset to sit outside the ritual cue bands, **or**
+   - Provide the fallback "ritual-safe" mix that locks to the metronome cues.
+4. Validate with a full night-drill run; no cue drift or narration overlap is allowed.
+5. Log the outcome with `python -m tools.frontline_feedback --workspace genesis-zeta` (include experience rating and note) and refresh the fleet summary via `python -m tools.frontline_feedback_summary`.
+6. Post the new report links in `#shagi-field-ops` so High Command can reference the sentiment bump.
+
 ## Exchange Procedure
 1. Run `python -m tools.ops_readiness`; do not proceed if `ok` is false.
 2. Run `python tools/exchange_all.py` to validate JSON packages and mirror them into the hub.
