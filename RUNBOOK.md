@@ -35,6 +35,18 @@ Escalation ladder: Primary -> Secondary -> Duty Officer -> Toyfoundry Flight (on
 4. **Go/No-Go (T-0)**
    - Announce status in `#shagi-field-ops` with the readiness timestamp and `git rev-parse HEAD` hash.
 
+## Daily Doc Refresh
+
+Run this ritual the first time you touch Toysoldiers each day:
+
+1. Run `python -m tools.ops_readiness`; if it fails, stop and fix readiness before editing.
+2. Review `planning/commonwealth_loop/doc_refresh_queue.md` and select the highest-signal docs that need updates.
+3. Refresh the selected scrolls (README, RUNBOOK, pivotal fronts, exchange guides) so they match current orders and telemetry evidence.
+4. Log the refresh in both `exchange/ledger/2025-11.md` and `C:/Users/Admin/high_command_exchange/ledger/2025-11.md` with timestamp + scope.
+5. Capture gaps or cross-workspace needs back into the queue and ping High Command when outside help is required.
+
+Document each run by appending to the queue file so the ledger trail and checklist stay synced.
+
 ## Mitigation Playbooks
 ### Dual-layer cooldown blitz
 - Source material: `exchange/reports/inbox/frontline_feedback_20251111T065332Z_genesis-delta.json` and `exchange/reports/inbox/frontline_feedback_20251111T072050Z_genesis-theta.json`.
@@ -103,3 +115,4 @@ Escalation ladder: Primary -> Secondary -> Duty Officer -> Toyfoundry Flight (on
 - Tooling: `tools/`
 
 Maintain this runbook as tactics evolve. Every edit requires the duty officer sign-off plus a fresh readiness run.
+

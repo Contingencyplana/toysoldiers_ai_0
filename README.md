@@ -52,6 +52,18 @@ orchestrated through **AI Labscapes** and the **16×16 emoji battlegrids**.
 
 ---
 
+## Daily Doc Refresh Ritual
+
+Before working in Toysoldiers on a new day, align our scrolls with High Command canon:
+
+1. Run `python -m tools.ops_readiness` and confirm readiness gates are green.
+2. Open `planning/commonwealth_loop/doc_refresh_queue.md` to see which docs need the highest-priority refresh.
+3. Update the targeted docs (README, RUNBOOK, pivotal fronts, exchange guides) so they reflect the current missions/orders.
+4. Record the refresh in both `exchange/ledger/2025-11.md` and `C:/Users/Admin/high_command_exchange/ledger/2025-11.md`.
+5. Note any cross-workspace gaps in the queue or escalate them back to High Command.
+
+Refer to `RUNBOOK.md` for the detailed checklist once you enter the ritual.
+
 ## 🩶 Field Operations Doctrine
 
 - **AI Labscapes Integration** — leveraging 256 labscapes for tactical advantage.
