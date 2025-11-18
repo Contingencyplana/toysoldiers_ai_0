@@ -1,0 +1,36 @@
+{
+  "batch": "mass_alfa_batch1",
+  "generated_at": "2025-11-18T02:47:29Z",
+  "baseline_tag": "forge-alfa@2025-11-13-054",
+  "source_order": "order-2025-11-13-054",
+  "instances": [
+    {
+      "id": "alfa-m04",
+      "codename": "Alfa M04",
+      "workspace": "toysoldiers_ai_0",
+      "role": "Gamma",
+      "status": "hydrated",
+      "hydrated_at": "2025-11-18T02:47:29Z",
+      "paths": {
+        "workspace_slot": "golf_03/kappa_04/alfa_m04",
+        "manifest": "production/mass_alfa_batch1/alfa_m04/README.md",
+        "readiness_template": "production/mass_alfa_batch1/alfa_m04/logs/readiness.json",
+        "smoke_template": "production/mass_alfa_batch1/alfa_m04/logs/smoke.txt",
+        "baseline": "production/mass_alfa_batch1/baseline.md"
+      },
+      "logs": {
+        "readiness": "logs/mass_alfa_batch1/Alfa-M04/ops_readiness.json",
+        "exchange": "logs/mass_alfa_batch1/Alfa-M04/exchange_all.json"
+      },
+      "exchange": {
+        "ack": "outbox/acks/order-2025-11-14-058-ack.json",
+        "report": "outbox/reports/order-2025-11-14-058-report.json",
+        "hello": "outbox/reports/hello-Alfa-M04-20251118T024729Z.json"
+      },
+      "notes": [
+        "Baseline pulled from toyfoundry_ai_0/production/mass_alfa_batch1 (forge-alfa@2025-11-13-054).",
+        "Workspace slot reserved for Gamma comfort/overlay instrumentation run once telemetry scripts land."
+      ]
+    }
+  ]
+}
