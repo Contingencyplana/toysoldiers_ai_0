@@ -1,0 +1,15 @@
+{
+  "instance_id": "Alfa-M06",
+  "order_id": "order-2025-11-19-060",
+  "baseline_tag": "forge-alfa@2025-11-19-060",
+  "hydration_path": "golf_04/alpha_04/alfa_m06",
+  "readiness_log": "../../../logs/ops_readiness.json",
+  "timestamp_utc": "2025-11-20T00:57:26.524665+00:00",
+  "status": "ok",
+  "notes": "Hydrated via Forge baseline copy; ops readiness re-run prior to hello.",
+  "evidence": {
+    "ops_readiness_script": "python tools/ops_readiness.py",
+    "smoke_command": "python ../../../tools/factory_order_emitter.py --help",
+    "smoke_log": "logs/smoke.txt"
+  }
+}
