@@ -4,9 +4,9 @@
   "baseline_tag": "forge-alfa@2025-11-19-060",
   "hydration_path": "golf_03/kappa_04/alfa_m04",
   "readiness_log": "../../../logs/ops_readiness.json",
-  "timestamp_utc": "2025-11-21T05:32:18.000000+00:00",
+  "timestamp_utc": "2025-11-21T15:43:47.827811+00:00",
   "status": "ok",
-  "notes": "Hydrated into the genesis-kappa comfort rail; readiness rerun captured Batch 2 overlay toggles before hello export.",
+  "notes": "Toysoldiers reran workspace readiness prior to acknowledgement; comfort overlay toggles verified in Batch 2 hydration.",
   "evidence": {
     "ops_readiness_script": "python tools/ops_readiness.py",
     "smoke_command": "python ../../../tools/factory_order_emitter.py --help",
