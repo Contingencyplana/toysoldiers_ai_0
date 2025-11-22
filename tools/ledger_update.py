@@ -66,7 +66,7 @@ def _order_id_from_filename(name: str) -> Optional[str]:
         return None
     core = name[:-5]  # strip .json
     # drop known suffixes
-    for suf in ("-report", "-ack", "-policy-update", "-policy-update-report", "-result"):
+    for suf in ("-policy-update-report", "-report", "-ack", "-result"):
         if core.endswith(suf):
             core = core[: -len(suf)]
             break
