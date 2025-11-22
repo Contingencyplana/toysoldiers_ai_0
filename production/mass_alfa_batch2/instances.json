@@ -11,7 +11,7 @@
       "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m04/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m04/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M04-20251121T054012Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M04-20251122T034500Z.json",
       "hydration": {
         "status": "completed",
         "workspace": "toyfoundry_ai_0",
@@ -28,7 +28,7 @@
       "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m06/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m06/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M06-20251120T005726Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M06-20251122T034501Z.json",
       "hydration": {
         "status": "completed",
         "workspace": "toyfoundry_ai_0",
@@ -45,7 +45,7 @@
       "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m07/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m07/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M07-20251120T010017Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M07-20251122T034502Z.json",
       "hydration": {
         "status": "completed",
         "workspace": "toyfoundry_ai_0",
@@ -62,7 +62,7 @@
       "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m08/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m08/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M08-20251120T010439Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M08-20251122T034503Z.json",
       "hydration": {
         "status": "completed",
         "workspace": "toyfoundry_ai_0",
@@ -79,7 +79,7 @@
       "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m09/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m09/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M09-20251120T010557Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M09-20251122T034504Z.json",
       "hydration": {
         "status": "completed",
         "workspace": "toyfoundry_ai_0",
@@ -96,7 +96,7 @@
       "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m10/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m10/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M10-20251120T010741Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M10-20251122T034505Z.json",
       "hydration": {
         "status": "completed",
         "workspace": "toyfoundry_ai_0",
@@ -113,7 +113,7 @@
       "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m11/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m11/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M11-20251120T010909Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M11-20251122T034506Z.json",
       "hydration": {
         "status": "completed",
         "workspace": "toyfoundry_ai_0",
