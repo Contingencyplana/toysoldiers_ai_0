@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2025-11-23T08:30:39.134510+00:00",
+  "timestamp_utc": "2025-11-23T18:30:15.810510+00:00",
   "workspace": "toysoldiers_ai_0",
   "python": "3.12.6",
   "hub_path": "C:\\Users\\Admin\\high_command_exchange",
@@ -24,6 +24,11 @@
       "missing": []
     },
     {
+      "kind": "ack",
+      "file": "order-2025-11-23-060-ack.json",
+      "missing": []
+    },
+    {
       "kind": "report",
       "file": "ack-Alfa-M04-20251121T162105Z.json",
       "missing": []
@@ -41,6 +46,16 @@
     {
       "kind": "report",
       "file": "order-2025-11-14-058-report.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "order-2025-11-23-060-m1m3-alignment.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "order-2025-11-23-060-valiant-prep.json",
       "missing": []
     }
   ],
