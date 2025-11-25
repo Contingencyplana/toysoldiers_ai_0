@@ -11,7 +11,8 @@ Quick-cast layout (DSL-aligned):
 - Guardrails: emoji-only inputs, wheel-locked options, translator validation via tools/emoji_translator.py.
 
 Telemetry slice:
-- Script: `python tools/campaign2_command_sim.py --run-id campaign2-playtest`.
+- Router/telemetry helper: `production/campaign2/command_layer.py` exposes `CommandTelemetry`, which the UI should call for every command/UI event.
+- Simulator: `python tools/campaign2_command_sim.py --run-id campaign2-playtest`.
 - Outputs (mirrored to logs/ and exchange/outbox/attachments/campaign2/):
   - `order-2025-11-26-061-campaign2-playtest.jsonl` (ui_state, command, revive, one_more_prompt, emoji_latency_sample).
   - `order-2025-11-26-061-campaign2-telemetry.json` (latency/accuracy aggregates, guardrails, wheel layout).
@@ -25,6 +26,6 @@ Playtest loop (90s tutorial):
 5) Checkpoint + one-more-run prompt.
 
 Next steps to wire real UI:
-- Bind wheel slots to DSL ids above; call the router in tools/campaign2_command_sim.py to validate glyph chains.
-- Emit emoji_latency_sample for each command (latency from wheel open -> cast).
-- Keep guardrails intact (no free text) and mirror telemetry to the hub alongside cadence/emitter smoke.
+- Bind wheel slots to DSL ids above; call `CommandTelemetry.record_command` for every cast/ping and `record_ui_state/record_revive/record_one_more_prompt` for HUD signals.
+- Use `CommandTelemetry.export_payloads` to feed UI logs or `write_outputs` to mirror to logs/ + attachments; emit `emoji_latency_sample` per command (latency from wheel open -> cast).
+- Keep guardrails intact (no free text) and mirror telemetry to the hub alongside cadence/emitter smoke once a real playtest runs.
