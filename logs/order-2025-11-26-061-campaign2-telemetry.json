@@ -1,0 +1,365 @@
+{
+  "schema": "toysoldiers-campaign2-telemetry@1.0",
+  "order_id": "order-2025-11-26-061",
+  "workspace": "toysoldiers_ai_0",
+  "run_id": "campaign2-playtest",
+  "timestamp": "2025-11-25T03:43:14.636285Z",
+  "metrics": {
+    "time_to_fun_ms": 3200,
+    "revive_ms": 14600,
+    "tutorial_duration_ms": 90000,
+    "avg_command_latency_ms": 390,
+    "p95_command_latency_ms": 540,
+    "command_accuracy": 0.9,
+    "commands_executed": 10,
+    "commands_valid": 9,
+    "one_more_accept": true
+  },
+  "hud_signals": {
+    "ui_state_events": 3,
+    "revive_events": 1,
+    "one_more_prompts": 1,
+    "emoji_latency_samples": 10
+  },
+  "latency_samples": [
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-2",
+      "related_event": "cmd-2",
+      "timestamp": "2025-11-25T03:43:17.835285Z",
+      "player": "P1",
+      "glyph_ids": [
+        "ally",
+        "shield",
+        "target"
+      ],
+      "glyphs": [
+        "🤖",
+        "🛡️",
+        "🎯"
+      ],
+      "latency_ms": 320,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-3",
+      "related_event": "cmd-3",
+      "timestamp": "2025-11-25T03:43:20.835285Z",
+      "player": "P2",
+      "glyph_ids": [
+        "forge",
+        "craft",
+        "tempo"
+      ],
+      "glyphs": [
+        "🛠️",
+        "⚒️",
+        "⏱️"
+      ],
+      "latency_ms": 410,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-4",
+      "related_event": "cmd-4",
+      "timestamp": "2025-11-25T03:43:23.835285Z",
+      "player": "P1",
+      "glyph_ids": [
+        "ally",
+        "deliver",
+        "risk"
+      ],
+      "glyphs": [
+        "🤖",
+        "📦",
+        "⚠️"
+      ],
+      "latency_ms": 280,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-5",
+      "related_event": "cmd-5",
+      "timestamp": "2025-11-25T03:43:28.835285Z",
+      "player": "P2",
+      "glyph_ids": [
+        "dream",
+        "deliver",
+        "idea"
+      ],
+      "glyphs": [
+        "🌌",
+        "📦",
+        "💡"
+      ],
+      "latency_ms": 540,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-6",
+      "related_event": "cmd-6",
+      "timestamp": "2025-11-25T03:43:32.835285Z",
+      "player": "P1",
+      "glyph_ids": [
+        "scout",
+        "probe",
+        "signal"
+      ],
+      "glyphs": [
+        "🛰️",
+        "🧭",
+        "🛰"
+      ],
+      "latency_ms": 360,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-7",
+      "related_event": "cmd-7",
+      "timestamp": "2025-11-25T03:43:37.235285Z",
+      "player": "P2",
+      "glyph_ids": [
+        "ally",
+        "shield",
+        "unknown_token"
+      ],
+      "glyphs": [
+        "🤖",
+        "🛡️",
+        "<?>"
+      ],
+      "latency_ms": 480,
+      "valid": false,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-9",
+      "related_event": "cmd-9",
+      "timestamp": "2025-11-25T03:43:49.835285Z",
+      "player": "P1",
+      "glyph_ids": [
+        "ally",
+        "deliver",
+        "rise"
+      ],
+      "glyphs": [
+        "🤖",
+        "📦",
+        "📈"
+      ],
+      "latency_ms": 300,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-10",
+      "related_event": "cmd-10",
+      "timestamp": "2025-11-25T03:44:01.235285Z",
+      "player": "P1",
+      "glyph_ids": [
+        "ally",
+        "shield",
+        "seed"
+      ],
+      "glyphs": [
+        "🤖",
+        "🛡️",
+        "🌱"
+      ],
+      "latency_ms": 620,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-12",
+      "related_event": "cmd-12",
+      "timestamp": "2025-11-25T03:44:14.835285Z",
+      "player": "P2",
+      "glyph_ids": [
+        "forge",
+        "craft",
+        "tempo"
+      ],
+      "glyphs": [
+        "🛠️",
+        "⚒️",
+        "⏱️"
+      ],
+      "latency_ms": 350,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    },
+    {
+      "type": "emoji_latency_sample",
+      "event_id": "latency-13",
+      "related_event": "cmd-13",
+      "timestamp": "2025-11-25T03:44:28.635285Z",
+      "player": "P1",
+      "glyph_ids": [
+        "ally",
+        "deliver",
+        "fallback"
+      ],
+      "glyphs": [
+        "🤖",
+        "📦",
+        "🆘"
+      ],
+      "latency_ms": 330,
+      "valid": true,
+      "order_id": "order-2025-11-26-061",
+      "run_id": "campaign2-playtest",
+      "workspace": "toysoldiers_ai_0"
+    }
+  ],
+  "guardrails": {
+    "input_mode": "emoji_dsl_only",
+    "filters": [
+      "no free text",
+      "template-bound commands",
+      "wheel-locked quick-cast"
+    ],
+    "non_emoji_inputs": []
+  },
+  "quick_cast_wheels": [
+    {
+      "wheel": "ability",
+      "slots": [
+        {
+          "slot": "north",
+          "label": "Shield ally",
+          "glyph_ids": [
+            "ally",
+            "shield",
+            "target"
+          ],
+          "glyphs": [
+            "🤖",
+            "🛡️",
+            "🎯"
+          ]
+        },
+        {
+          "slot": "east",
+          "label": "Fast forge",
+          "glyph_ids": [
+            "forge",
+            "craft",
+            "tempo"
+          ],
+          "glyphs": [
+            "🛠️",
+            "⚒️",
+            "⏱️"
+          ]
+        },
+        {
+          "slot": "south",
+          "label": "Dream drop",
+          "glyph_ids": [
+            "dream",
+            "deliver",
+            "idea"
+          ],
+          "glyphs": [
+            "🌌",
+            "📦",
+            "💡"
+          ]
+        },
+        {
+          "slot": "west",
+          "label": "Scout ping",
+          "glyph_ids": [
+            "scout",
+            "probe",
+            "signal"
+          ],
+          "glyphs": [
+            "🛰️",
+            "🧭",
+            "🛰"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "textless_comm",
+      "slots": [
+        {
+          "slot": "ping",
+          "label": "Danger ping",
+          "glyph_ids": [
+            "ally",
+            "deliver",
+            "risk"
+          ],
+          "glyphs": [
+            "🤖",
+            "📦",
+            "⚠️"
+          ]
+        },
+        {
+          "slot": "revive_ping",
+          "label": "Revive call",
+          "glyph_ids": [
+            "ally",
+            "deliver",
+            "rise"
+          ],
+          "glyphs": [
+            "🤖",
+            "📦",
+            "📈"
+          ]
+        },
+        {
+          "slot": "fallback",
+          "label": "Fallback signal",
+          "glyph_ids": [
+            "ally",
+            "deliver",
+            "fallback"
+          ],
+          "glyphs": [
+            "🤖",
+            "📦",
+            "🆘"
+          ]
+        }
+      ]
+    }
+  ]
+}

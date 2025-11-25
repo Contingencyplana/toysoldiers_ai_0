@@ -83,7 +83,8 @@ def derive_intent(chain: Sequence[Glyph]) -> Dict[str, Any]:
     if action is None:
         raise ValueError("Glyph chain missing verb")
 
-    remaining = [glyph for glyph in chain if glyph not in {actor, action}]
+    # Avoid hashing Glyph (extras contain dict), check membership via tuple instead of set
+    remaining = [glyph for glyph in chain if glyph not in (actor, action)]
     target = next((g for g in remaining if g.category == "nouns"), None)
     qualifiers = [g for g in remaining if g.category == "qualifiers"]
     outcome = next((g for g in reversed(chain) if g.category == "outcomes"), None)
